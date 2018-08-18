@@ -18,7 +18,7 @@ public class DamageEffectUnit : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         animator = GetComponent<Animator>();
 
-        float newScale = Random.Range(1.25f, 1.75f);
+        float newScale = Random.Range(0.75f, 1f);
         rectTransform.localScale = new Vector3(newScale, newScale);
 
         animator.speed = Random.Range(0.5f, 1f);

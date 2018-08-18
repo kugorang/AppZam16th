@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Thrower: MonoBehaviour
 {
     private const float maxHp = 100;
-    private float hp;
+    [HideInInspector] public float hp;
 
     private Image image;
 

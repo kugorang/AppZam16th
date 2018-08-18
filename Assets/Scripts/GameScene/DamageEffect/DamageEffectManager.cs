@@ -19,7 +19,7 @@ public class DamageEffectManager : SingleTon<DamageEffectManager>
     }
 
     private IEnumerator CreateDamageEffect() {
-        for (int i = 0; i < Random.Range(7, 11); i++)
+        for (int i = 0; i < 5; i++)
         {
             Instantiate(damageEffectUnit, GameObject.Find("Canvas").transform);
             yield return new WaitForSeconds(0.1f);

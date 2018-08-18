@@ -7,7 +7,8 @@ public class Background : MonoBehaviour
 {
     public List<float> backgroundTimes = new List<float>();
 
-    private Animator animator;
+    [HideInInspector] public Animator animator;
+    private AnimationState animationState;
 
     private float time = 0;
     private int index = 0;
