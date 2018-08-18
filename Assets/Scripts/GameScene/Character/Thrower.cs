@@ -1,22 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Thrower: MonoBehaviour
+namespace GameScene.Character
 {
-    private const float maxHp = 100;
-    [HideInInspector] public float hp;
-
-    private Image image;
-
-	private void Start()
+	public class Thrower: MonoBehaviour
 	{
-        image = GetComponent<Image>();
+		private const float maxHp = 100;
+		[HideInInspector] public float hp;
 
-        //PlayerPrefs.GetString("Player");
-        image.sprite = CharacterManager.Instance.manSprites[0];
+		private Image image;
+	
+		private void Start()
+		{
+			image = GetComponent<Image>();
 
-        hp = maxHp;
+			//PlayerPrefs.GetString("Player");
+			image.sprite = CharacterManager.Instance.manSprites[0];
+
+			hp = maxHp;
+		}
 	}
 }

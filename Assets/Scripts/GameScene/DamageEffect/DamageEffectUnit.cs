@@ -1,33 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-public class DamageEffectUnit : MonoBehaviour
+namespace GameScene.DamageEffect
 {
-    private RectTransform rectTransform;
-    private Animator animator;
-    private AnimatorStateInfo animatorStateInfo;
-
-    private float speed;
-
-    [HideInInspector] public int damage;
-
-    private void Start()
+    public class DamageEffectUnit : MonoBehaviour
     {
-        rectTransform = GetComponent<RectTransform>();
-        animator = GetComponent<Animator>();
+        private RectTransform rectTransform;
+        private Animator animator;
+        private AnimatorStateInfo animatorStateInfo;
 
-        float newScale = Random.Range(0.75f, 1f);
-        rectTransform.localScale = new Vector3(newScale, newScale);
+        private float speed;
 
-        animator.speed = Random.Range(0.5f, 1f);
+        [HideInInspector] 
+        public int damage;
+
+        private void Start()
+        {
+            rectTransform = GetComponent<RectTransform>();
+            animator = GetComponent<Animator>();
+
+            var newScale = Random.Range(0.75f, 1f);
+            rectTransform.localScale = new Vector3(newScale, newScale);
+
+            animator.speed = Random.Range(0.5f, 1f);
+        }
+
+        private void Update()
+        {
+            animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (animatorStateInfo.normalizedTime >= 1.0f)
+                Destroy(gameObject);
+        }
     }
-
-	private void Update()
-	{
-        animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if (animatorStateInfo.normalizedTime >= 1.0f)
-            Destroy(gameObject);
-	}
 }

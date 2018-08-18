@@ -7,7 +7,7 @@ namespace LogoScene
 	{
 		public void OnGameStartBtnClick()
 		{
-			SceneManager.LoadScene("Main");
+			SceneManager.LoadScene("Scenes/Main");
 		}
 
 		public void OnOptionBtnClick()
