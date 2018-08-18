@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Background : MonoBehaviour
 {
@@ -33,7 +34,8 @@ public class Background : MonoBehaviour
         }
         else
         {
-            //게임 오버
+            PlayerPrefs.SetInt("EndingNum", 0);
+            SceneManager.LoadScene("Scenes/Ending");
         }
 	}
 }
