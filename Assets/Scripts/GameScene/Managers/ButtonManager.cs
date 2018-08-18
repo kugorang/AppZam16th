@@ -117,6 +117,9 @@ namespace GameScene.Managers
 
                 foreach (var time in TimeDisplayer)
                     time.text = (3.0f + timeGap++).ToString("N1");
+                
+                foreach (var bar in ProgressBar)
+                    bar.gameObject.SetActive(false);
             }
         }
 

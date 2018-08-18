@@ -5,6 +5,10 @@ namespace LogoScene
 {
 	public class ButtonManager : MonoBehaviour 
 	{
+		[Space(20)]
+		public GameObject BlurPanel;
+		public GameObject SettingPanel;
+		
 		public void OnGameStartBtnClick()
 		{
 			SceneManager.LoadScene("Scenes/Main");
@@ -12,7 +16,14 @@ namespace LogoScene
 
 		public void OnOptionBtnClick()
 		{
-			// TODO: 옵션창 띄울 것!
+			BlurPanel.SetActive(true);
+			SettingPanel.SetActive(true);
+		}
+		
+		public void OnBackGameButtonClick()
+		{
+			BlurPanel.SetActive(false);
+			SettingPanel.SetActive(false);
 		}
 	}
 }
