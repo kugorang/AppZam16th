@@ -1,17 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SceneManager : MonoBehaviour 
+public class SceneManager : MonoBehaviour
 {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public ScrollRect ScrollRect;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
