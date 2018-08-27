@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameScene_KMG.unity
-    guid: fcd30315f401b465f871cac2f4e0eb1d
+    path: Assets/Scenes/StartScene.unity
+    guid: 7142b7bc6636c584d8c77a52facf751e
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 0c0d3475f0b964105b2d47f50b3a0fe0
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: d0cf0318b25fe1944b895edc2e5fe11d
   m_configObjects: {}
